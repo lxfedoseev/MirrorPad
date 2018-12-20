@@ -15,6 +15,11 @@
 		42F35C3D20449C9A00584FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3C20449C9A00584FAD /* Assets.xcassets */; };
 		42F35C4020449C9A00584FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */; };
 		D9DB83ED21CAC5620036BCA3 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83EC21CAC5620036BCA3 /* Copying.swift */; };
+		D9DB83F121CC0C470036BCA3 /* AcceptInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F021CC0C470036BCA3 /* AcceptInputState.swift */; };
+		D9DB83F321CC0C520036BCA3 /* AnimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F221CC0C520036BCA3 /* AnimateState.swift */; };
+		D9DB83F521CC0C5D0036BCA3 /* ClearState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F421CC0C5D0036BCA3 /* ClearState.swift */; };
+		D9DB83F721CC0C660036BCA3 /* CopyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F621CC0C660036BCA3 /* CopyState.swift */; };
+		D9DB83F921CC0C700036BCA3 /* DrawViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F821CC0C700036BCA3 /* DrawViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		42F35C3F20449C9A00584FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42F35C4120449C9A00584FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9DB83EC21CAC5620036BCA3 /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = SOURCE_ROOT; };
+		D9DB83F021CC0C470036BCA3 /* AcceptInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptInputState.swift; sourceTree = "<group>"; };
+		D9DB83F221CC0C520036BCA3 /* AnimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateState.swift; sourceTree = "<group>"; };
+		D9DB83F421CC0C5D0036BCA3 /* ClearState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearState.swift; sourceTree = "<group>"; };
+		D9DB83F621CC0C660036BCA3 /* CopyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyState.swift; sourceTree = "<group>"; };
+		D9DB83F821CC0C700036BCA3 /* DrawViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +116,8 @@
 		42F35C4920449CAA00584FAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				424387E320449D300056B653 /* DrawView.swift */,
+				D9DB83EE21CC0BDA0036BCA3 /* DrawView */,
 				42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */,
-				424387E62044A1ED0056B653 /* LineShape.swift */,
 				42F35C3920449C9A00584FAD /* Main.storyboard */,
 			);
 			path = Views;
@@ -121,6 +130,28 @@
 				42F35C4120449C9A00584FAD /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9DB83EE21CC0BDA0036BCA3 /* DrawView */ = {
+			isa = PBXGroup;
+			children = (
+				424387E62044A1ED0056B653 /* LineShape.swift */,
+				424387E320449D300056B653 /* DrawView.swift */,
+				D9DB83EF21CC0C190036BCA3 /* States */,
+			);
+			path = DrawView;
+			sourceTree = "<group>";
+		};
+		D9DB83EF21CC0C190036BCA3 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				D9DB83F021CC0C470036BCA3 /* AcceptInputState.swift */,
+				D9DB83F221CC0C520036BCA3 /* AnimateState.swift */,
+				D9DB83F421CC0C5D0036BCA3 /* ClearState.swift */,
+				D9DB83F621CC0C660036BCA3 /* CopyState.swift */,
+				D9DB83F821CC0C700036BCA3 /* DrawViewState.swift */,
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,10 +227,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9DB83F321CC0C520036BCA3 /* AnimateState.swift in Sources */,
 				42F35C3820449C9A00584FAD /* ViewController.swift in Sources */,
+				D9DB83F721CC0C660036BCA3 /* CopyState.swift in Sources */,
 				424387E72044A1ED0056B653 /* LineShape.swift in Sources */,
+				D9DB83F921CC0C700036BCA3 /* DrawViewState.swift in Sources */,
+				D9DB83F521CC0C5D0036BCA3 /* ClearState.swift in Sources */,
 				D9DB83ED21CAC5620036BCA3 /* Copying.swift in Sources */,
 				42F35C3620449C9A00584FAD /* AppDelegate.swift in Sources */,
+				D9DB83F121CC0C470036BCA3 /* AcceptInputState.swift in Sources */,
 				424387E420449D300056B653 /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
