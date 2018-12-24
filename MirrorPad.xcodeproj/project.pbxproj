@@ -16,6 +16,10 @@
 		42F35C4020449C9A00584FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */; };
 		D944BE6721D0B6DB0071ABF4 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944BE6621D0B6DB0071ABF4 /* Copying.swift */; };
 		D944BE6B21D0B7880071ABF4 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944BE6A21D0B7880071ABF4 /* MulticastDelegate.swift */; };
+		D944BE6F21D0BFA50071ABF4 /* DrawingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944BE6D21D0BFA50071ABF4 /* DrawingSelectionViewController.swift */; };
+		D944BE7021D0BFA50071ABF4 /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944BE6E21D0BFA50071ABF4 /* ImageRenderer.swift */; };
+		D944BE7221D0C0BF0071ABF4 /* DrawingSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D944BE7121D0C0BF0071ABF4 /* DrawingSelectionViewController.xib */; };
+		D944BE7421D0C17C0071ABF4 /* ShareFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944BE7321D0C17C0071ABF4 /* ShareFacade.swift */; };
 		D9DB83F121CC0C470036BCA3 /* AcceptInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F021CC0C470036BCA3 /* AcceptInputState.swift */; };
 		D9DB83F321CC0C520036BCA3 /* AnimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F221CC0C520036BCA3 /* AnimateState.swift */; };
 		D9DB83F521CC0C5D0036BCA3 /* ClearState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F421CC0C5D0036BCA3 /* ClearState.swift */; };
@@ -35,6 +39,10 @@
 		42F35C4120449C9A00584FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D944BE6621D0B6DB0071ABF4 /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
 		D944BE6A21D0B7880071ABF4 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		D944BE6D21D0BFA50071ABF4 /* DrawingSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingSelectionViewController.swift; sourceTree = "<group>"; };
+		D944BE6E21D0BFA50071ABF4 /* ImageRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		D944BE7121D0C0BF0071ABF4 /* DrawingSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawingSelectionViewController.xib; sourceTree = "<group>"; };
+		D944BE7321D0C17C0071ABF4 /* ShareFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFacade.swift; sourceTree = "<group>"; };
 		D9DB83F021CC0C470036BCA3 /* AcceptInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptInputState.swift; sourceTree = "<group>"; };
 		D9DB83F221CC0C520036BCA3 /* AnimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateState.swift; sourceTree = "<group>"; };
 		D9DB83F421CC0C5D0036BCA3 /* ClearState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearState.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 				D9DB83EE21CC0BDA0036BCA3 /* DrawView */,
 				42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */,
 				42F35C3920449C9A00584FAD /* Main.storyboard */,
+				D944BE7121D0C0BF0071ABF4 /* DrawingSelectionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +140,9 @@
 		D944BE6C21D0B7ED0071ABF4 /* Facades */ = {
 			isa = PBXGroup;
 			children = (
+				D944BE6D21D0BFA50071ABF4 /* DrawingSelectionViewController.swift */,
+				D944BE6E21D0BFA50071ABF4 /* ImageRenderer.swift */,
+				D944BE7321D0C17C0071ABF4 /* ShareFacade.swift */,
 			);
 			path = Facades;
 			sourceTree = "<group>";
@@ -217,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D944BE7221D0C0BF0071ABF4 /* DrawingSelectionViewController.xib in Resources */,
 				42F35C4020449C9A00584FAD /* LaunchScreen.storyboard in Resources */,
 				42F35C3D20449C9A00584FAD /* Assets.xcassets in Resources */,
 				42F35C3B20449C9A00584FAD /* Main.storyboard in Resources */,
@@ -231,9 +244,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9DB83F321CC0C520036BCA3 /* AnimateState.swift in Sources */,
+				D944BE7421D0C17C0071ABF4 /* ShareFacade.swift in Sources */,
 				42F35C3820449C9A00584FAD /* ViewController.swift in Sources */,
 				D9DB83F721CC0C660036BCA3 /* CopyState.swift in Sources */,
 				424387E72044A1ED0056B653 /* LineShape.swift in Sources */,
+				D944BE7021D0BFA50071ABF4 /* ImageRenderer.swift in Sources */,
+				D944BE6F21D0BFA50071ABF4 /* DrawingSelectionViewController.swift in Sources */,
 				D9DB83F921CC0C700036BCA3 /* DrawViewState.swift in Sources */,
 				D9DB83F521CC0C5D0036BCA3 /* ClearState.swift in Sources */,
 				42F35C3620449C9A00584FAD /* AppDelegate.swift in Sources */,
