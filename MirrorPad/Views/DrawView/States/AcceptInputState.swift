@@ -46,21 +46,52 @@ public class AcceptInputState: DrawViewState {
     copyState.copyLines(from: source)
   }
   // 2
-  public override func touchesBegan(_ touches: Set<UITouch>, with event:
-    UIEvent?) {
-    guard let point = touches.first?.location(in: drawView) else {
-      return
-    }
-    let line = LineShape(color: drawView.lineColor,
-                         width: drawView.lineWidth,
+  public override func touchesBegan(_ touches: Set<UITouch>,
+                                    with event: UIEvent?) {
+    guard let point = touches.first?.location(in: drawView)
+      else { return }
+    let line = LineShape(color: drawView.lineColor, width: drawView.lineWidth,
                          startPoint: point)
+      // 1
+      addLine(line)
+      // 2
+    drawView.multicastDelegate.invokeDelegates {
+      $0.drawView(drawView, didAddLine: line)
+    }
+  }
+  private func addLine(_ line: LineShape) {
     drawView.lines.append(line)
     drawView.layer.addSublayer(line)
   }
-  public override func touchesMoved(_ touches: Set<UITouch>, with event:
-    UIEvent?) {
-    guard let point = touches.first?.location(in: drawView),
-      let currentLine = drawView.lines.last else { return }
-    currentLine.addPoint(point)
+    
+  
+  public override func touchesMoved(_ touches: Set<UITouch>,
+                                    with event: UIEvent?) {
+    guard let point = touches.first?.location(in: drawView)
+      else { return }
+    // 1
+    addPoint(point)
+    // 2
+    drawView.multicastDelegate.invokeDelegates {
+      $0.drawView(drawView, didAddPoint: point)
+    }
+  }
+  
+  private func addPoint(_ point: CGPoint) {
+    drawView.lines.last?.addPoint(point)
+  }
+  
+}
+
+// MARK: - DrawViewDelegate
+extension AcceptInputState {
+  public override func drawView(_ source: DrawView,
+                                didAddLine line: LineShape) {
+    let newLine = line.copy() as LineShape
+    addLine(newLine)
+}
+  public override func drawView(_ source: DrawView, didAddPoint point: CGPoint) {
+    addPoint(point)
   }
 }
+

@@ -14,7 +14,8 @@
 		42F35C3B20449C9A00584FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3920449C9A00584FAD /* Main.storyboard */; };
 		42F35C3D20449C9A00584FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3C20449C9A00584FAD /* Assets.xcassets */; };
 		42F35C4020449C9A00584FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */; };
-		D9DB83ED21CAC5620036BCA3 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83EC21CAC5620036BCA3 /* Copying.swift */; };
+		D944BE6721D0B6DB0071ABF4 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944BE6621D0B6DB0071ABF4 /* Copying.swift */; };
+		D944BE6B21D0B7880071ABF4 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944BE6A21D0B7880071ABF4 /* MulticastDelegate.swift */; };
 		D9DB83F121CC0C470036BCA3 /* AcceptInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F021CC0C470036BCA3 /* AcceptInputState.swift */; };
 		D9DB83F321CC0C520036BCA3 /* AnimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F221CC0C520036BCA3 /* AnimateState.swift */; };
 		D9DB83F521CC0C5D0036BCA3 /* ClearState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB83F421CC0C5D0036BCA3 /* ClearState.swift */; };
@@ -32,7 +33,8 @@
 		42F35C3C20449C9A00584FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42F35C3F20449C9A00584FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42F35C4120449C9A00584FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9DB83EC21CAC5620036BCA3 /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = SOURCE_ROOT; };
+		D944BE6621D0B6DB0071ABF4 /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
+		D944BE6A21D0B7880071ABF4 /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		D9DB83F021CC0C470036BCA3 /* AcceptInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptInputState.swift; sourceTree = "<group>"; };
 		D9DB83F221CC0C520036BCA3 /* AnimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateState.swift; sourceTree = "<group>"; };
 		D9DB83F421CC0C5D0036BCA3 /* ClearState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearState.swift; sourceTree = "<group>"; };
@@ -51,21 +53,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4245EC792074415400E347D0 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				D9DB83EC21CAC5620036BCA3 /* Copying.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		4245EC7C2074417100E347D0 /* Facades */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Facades;
-			sourceTree = "<group>";
-		};
 		42F35C2920449C9A00584FAD = {
 			isa = PBXGroup;
 			children = (
@@ -87,10 +74,10 @@
 		42F35C3420449C9A00584FAD /* MirrorPad */ = {
 			isa = PBXGroup;
 			children = (
+				D944BE6C21D0B7ED0071ABF4 /* Facades */,
+				D944BE6521D0B6C80071ABF4 /* Protocols */,
 				42F35C4720449C9D00584FAD /* AppDelegate */,
 				42F35C4820449CA300584FAD /* Controllers */,
-				4245EC7C2074417100E347D0 /* Facades */,
-				4245EC792074415400E347D0 /* Protocols */,
 				42F35C4A20449CB400584FAD /* Resources */,
 				42F35C4920449CAA00584FAD /* Views */,
 			);
@@ -130,6 +117,22 @@
 				42F35C4120449C9A00584FAD /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D944BE6521D0B6C80071ABF4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D944BE6621D0B6DB0071ABF4 /* Copying.swift */,
+				D944BE6A21D0B7880071ABF4 /* MulticastDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D944BE6C21D0B7ED0071ABF4 /* Facades */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Facades;
 			sourceTree = "<group>";
 		};
 		D9DB83EE21CC0BDA0036BCA3 /* DrawView */ = {
@@ -233,8 +236,9 @@
 				424387E72044A1ED0056B653 /* LineShape.swift in Sources */,
 				D9DB83F921CC0C700036BCA3 /* DrawViewState.swift in Sources */,
 				D9DB83F521CC0C5D0036BCA3 /* ClearState.swift in Sources */,
-				D9DB83ED21CAC5620036BCA3 /* Copying.swift in Sources */,
 				42F35C3620449C9A00584FAD /* AppDelegate.swift in Sources */,
+				D944BE6721D0B6DB0071ABF4 /* Copying.swift in Sources */,
+				D944BE6B21D0B7880071ABF4 /* MulticastDelegate.swift in Sources */,
 				D9DB83F121CC0C470036BCA3 /* AcceptInputState.swift in Sources */,
 				424387E420449D300056B653 /* DrawView.swift in Sources */,
 			);
